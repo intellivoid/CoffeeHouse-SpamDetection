@@ -3,5 +3,4 @@ include LICENSE
 include NOTICE
 include MANIFEST.in
 include requirements.txt
-recursive-include coffeehouse_spamdetection/model *
-recursive-include coffeehouse_spamdetection/model_output *
+recursive-include coffeehouse_spamdetection/spam_ham_build *

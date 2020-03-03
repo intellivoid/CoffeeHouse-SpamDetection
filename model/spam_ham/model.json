@@ -9,7 +9,9 @@
     "training_properties":{
         "epoch": 35,
         "vec_dim": 100,
-        "test_ratio": 0.2
+        "test_ratio": 0.2,
+        "architecture": "cnn",
+        "batch_size": 64
     },
     "classification": [
         {"l": "spam", "f": "spam.dat"},
