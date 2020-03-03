@@ -6,21 +6,13 @@ __all__ = ['SpamDetection']
 
 class SpamDetection(object):
 
-    def __int__(self):
+    def __init__(self):
         """
         Public Constructor
         """
         self.dltc = DLTC()
-        self.dltc.load_model_cluster(self.model_directory())
-
-    @staticmethod
-    def model_directory():
-        """
-        Returns the directory for the built model
-
-        :return: The absolute path for the built model
-        """
-        return os.path.join(os.path.dirname(__file__), 'spam_ham_build')
+        self.model_directory = os.path.join(os.path.dirname(__file__), 'spam_ham_build')
+        self.dltc.load_model_cluster(self.model_directory)
 
     def predict(self, text_input):
         """
