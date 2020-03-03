@@ -1,8 +1,10 @@
 import os
 from coffeehouse_dltc.main import DLTC
 
+__all__ = ['SpamDetection']
 
-class SpamDetection:
+
+class SpamDetection(object):
 
     def __int__(self):
         """
