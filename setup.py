@@ -1,8 +1,4 @@
-from coffeehouse_spamdetection.main import SpamDetection
 from setuptools import setup, find_packages
-
-spam_detection = SpamDetection()
-spam_detection.train_model()
 
 setup(
     name='coffeehouse_spamdetection',
