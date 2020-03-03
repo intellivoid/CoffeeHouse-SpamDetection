@@ -2,7 +2,7 @@ import os
 from coffeehouse_dltc.main import DLTC
 
 
-class SpamDetection(object):
+class SpamDetection:
 
     def __int__(self):
         """
@@ -20,12 +20,12 @@ class SpamDetection(object):
         """
         return os.path.join(os.path.dirname(__file__), 'spam_ham_build')
 
-    def predict(self, input):
+    def predict(self, text_input):
         """
         Takes the user input and predicts if the input is either
         spam or ham
 
-        :param input:
+        :param text_input:
         :return: Returns dictionary "ham", "spam" prediction values
         """
-        return self.dltc.predict_from_text(input)
+        return self.dltc.predict_from_text(text_input)
