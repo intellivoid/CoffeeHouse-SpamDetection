@@ -1,5 +1,4 @@
 import sys
-import os
 
 from coffeehouse_spamdetection import SpamDetection
 
