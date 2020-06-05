@@ -24,10 +24,9 @@ def _help_menu(argv=None):
     :return:
     """
     print(
-        "CoffeeHouse DLTC CLI\n\n"
-        "   --model-info <directory_structure_input>\n"
-        "   --train-model <directory_structure_input>\n"
-        "   --test-model <model_directory>\n"
+        "CoffeeHouse SpamDetection CLI\n\n"
+        "   --help\n"
+        "   --test\n"
     )
     sys.exit()
 
