@@ -1,20 +1,25 @@
 import os
 from coffeehouse_dltc.main import DLTC
-from coffeehouse_dltc.chmodel.configuration import Configuration
+
+__all__ = ['SpamDetection']
+
 
 class SpamDetection(object):
 
-    def __int__(self):
+    def __init__(self):
+        """
+        Public Constructor
+        """
         self.dltc = DLTC()
+        self.model_directory = os.path.join(os.path.dirname(__file__), 'spam_ham_build')
+        self.dltc.load_model_cluster(self.model_directory)
 
-    @staticmethod
-    def models_directory():
-        return os.path.join(os.path.dirname(__file__), 'model')
+    def predict(self, text_input):
+        """
+        Takes the user input and predicts if the input is either
+        spam or ham
 
-    @staticmethod
-    def models_trained_directory():
-        return  os.path.join(os.path.dirname(__file__), 'model_output')
-
-    def train_model(self):
-        configuration = Configuration(self.models_directory())
-        configuration.train_model()
+        :param text_input:
+        :return: Returns dictionary "ham", "spam" prediction values
+        """
+        return self.dltc.predict_from_text(text_input)

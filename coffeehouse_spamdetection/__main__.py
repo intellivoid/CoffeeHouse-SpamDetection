@@ -1,6 +1,7 @@
 import sys
 
 from coffeehouse_spamdetection import SpamDetection
+from coffeehouse_spamdetection import Server
 
 
 def _real_main(argv=None):
@@ -14,6 +15,13 @@ def _real_main(argv=None):
         _help_menu(argv)
     if argv[1] == '--test':
         _test_model(argv)
+    if argv[1] == '--start-server':
+        _start_server(argv)
+
+
+def _start_server(argv=None):
+    server = Server()
+    server.start()
 
 
 def _help_menu(argv=None):

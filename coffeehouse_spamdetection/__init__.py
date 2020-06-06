@@ -1,4 +1,7 @@
 from . import main
 from .main import *
 
-__all__ = ["main", "SpamDetection"]
+from . import server
+from .server import *
+
+__all__ = ["main", "SpamDetection", "Server"]
