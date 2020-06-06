@@ -1,5 +1,7 @@
 from hyper_internal_service import web
 
+from coffeehouse_spamdetection import SpamDetection
+
 __all__ = ['Server']
 
 
@@ -11,10 +13,12 @@ class Server(object):
         self.web_application.add_routes(
             [web.get('/', self.predict)]
         )
+        self.spam_detection = SpamDetection()
 
     async def predict(self, request):
-        data = {'some': 'data'}
-        return web.json_response(data)
+        post_data = await request.post()
+        response = self.spam_detection.predict(post_data['input'])
+        return web.json_response(response)
 
     def start(self):
         web.run_app(app=self.web_application, port=self.port)
