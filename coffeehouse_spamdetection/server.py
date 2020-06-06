@@ -11,7 +11,7 @@ class Server(object):
         self.port = port
         self.web_application = web.Application()
         self.web_application.add_routes(
-            [web.get('/', self.predict)]
+            [web.post('/', self.predict)]
         )
         self.spam_detection = SpamDetection()
 
