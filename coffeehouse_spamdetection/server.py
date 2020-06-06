@@ -17,7 +17,14 @@ class Server(object):
 
     async def predict(self, request):
         post_data = await request.post()
-        response = self.spam_detection.predict(post_data['input'])
+        results = self.spam_detection.predict(post_data['input'])
+        response = {
+            "status": True,
+            "results": {
+                "ham": str(results['ham']),
+                "spam": str(results['spam'])
+            }
+        }
         return web.json_response(response)
 
     def start(self):
