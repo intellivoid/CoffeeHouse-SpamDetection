@@ -16,10 +16,10 @@ setup(
         'Programming Language :: Python :: 3',
     ],
     keywords='multi-label classification nlp neural networks deep learning',
-    packages=find_packages(exclude=['tests']),
+    packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        'coffeehouse_spamdetection',
+        'coffeehouse_dltc',
         'hyper_internal_service'
     ],
     entry_points='''
