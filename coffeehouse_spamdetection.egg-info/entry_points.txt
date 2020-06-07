@@ -1,4 +1,0 @@
-
-        [console_scripts]
-        coffeehouse_spamdetection=coffeehouse_spamdetection.linear_classifier.cli:cli
-    
