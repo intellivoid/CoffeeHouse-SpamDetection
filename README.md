@@ -2,6 +2,21 @@
 
 Library for detecting spam by classifying input as spam/ham
 
+## Installation
+
+Install the following packages using the corresponding setup and makefile
+operations provided by the repo, or use CoffeeHouse-Server's install script
+to install all the required components
+
+ - Hyper-Internal-Service
+ - CoffeeHouse-NLPFR
+ - CoffeeHouse-DLTC 
+ - CoffeeHouseMod-Tokenizer
+ - CoffeeHouseMod-StopWords
+ - CoffeeHouseMod-APT
+ 
+Finally, install CoffeeHouse-SpamDetection by running `python3 setup.py install`
+
 ## Example Usage
 ```py
 from coffeehouse_spamdetection.main import SpamDetection
