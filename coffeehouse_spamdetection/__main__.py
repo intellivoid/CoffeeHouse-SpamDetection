@@ -20,6 +20,12 @@ def _real_main(argv=None):
 
 
 def _start_server(argv=None):
+    """
+    Starts the server
+
+    :param argv:
+    :return:
+    """
     server = Server()
     server.start()
 
@@ -35,6 +41,7 @@ def _help_menu(argv=None):
         "CoffeeHouse SpamDetection CLI\n\n"
         "   --help\n"
         "   --test\n"
+        "   --start-servver  rrr\n"
     )
     sys.exit()
 
@@ -60,4 +67,4 @@ if __name__ == '__main__':
     try:
         _real_main(sys.argv)
     except KeyboardInterrupt:
-        print('\nERROR: Interrupted by user')
+        print('\nInterrupted by user')
